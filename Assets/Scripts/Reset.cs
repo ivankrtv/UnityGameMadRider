@@ -6,7 +6,7 @@ public class Reset : MonoBehaviour
     public GameObject Road, Player;
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Game");
         Road.GetComponent<RoadMove>().isCrashed = false;
         Player.GetComponent<MainCarMove>().isCrashed = false;
         EnemyMove.isCrashed = false;
@@ -14,5 +14,10 @@ public class Reset : MonoBehaviour
         Score.isCrashed = false;
         EnemyGenerate.TimeOfGeneration = 1f;
         EnemyMove.speed = 10f;
+    }
+
+    public void BackMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

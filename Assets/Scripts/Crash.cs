@@ -4,8 +4,8 @@ using System;
 
 public class Crash : MonoBehaviour
 {
-    public GameObject Road, Player, ButtonRestart, ScoreText, FinalText, scoreCount;
-    public Text FTtext;
+    public GameObject Road, Player, ScoreText, FinalText, scoreCount, ButtonsFail, SaveData;
+    public Text FTtext, RecordText;
     public GameObject LeftTouch, RightTouch;
 
     void OnTriggerEnter(Collider col)
@@ -14,13 +14,16 @@ public class Crash : MonoBehaviour
         RightTouch.GetComponent<RightTouch>().isCrashed = true;
         Road.GetComponent<RoadMove>().isCrashed = true;
         Player.GetComponent<MainCarMove>().isCrashed = true;
-        //Enemy.GetComponent<EnemyMove>().isCrashed = true;
         EnemyMove.isCrashed = true;
         EnemyGenerate.isCrashed = true;
         Score.isCrashed = true;
-        ButtonRestart.SetActive(true);
+
+        SaveData.GetComponent<SavePlayersData>().analys();
+
+        ButtonsFail.SetActive(true);
         ScoreText.SetActive(false);
-        FinalText.SetActive(true);
         FTtext.text = Convert.ToString(scoreCount.GetComponent<Score>().score) + " m";
+        RecordText.text = "Рекорд: " + Convert.ToString(SaveData.GetComponent<SavePlayersData>().record) + " m";
+        FinalText.SetActive(true);
     }
 }

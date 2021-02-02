@@ -6,9 +6,11 @@ ScriptsOnlyBuild:
     - EnemyMove
     - LeftTouch
     - MainCarMove
+    - MainMenu
     - Reset
     - RightTouch
     - RoadMove
+    - SavePlayersData
     - Score
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -18,8 +20,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
-    Unity.Mobile.AndroidLogcat.Editor.dll:
-    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -47,7 +47,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Game.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -65,8 +65,6 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
@@ -95,17 +93,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12382}
     - Class: 114
-      Script: {instanceID: 12438}
-    - Class: 114
       Script: {instanceID: 12484}
     - Class: 114
       Script: {instanceID: 12956}
     - Class: 114
       Script: {instanceID: 13140}
-    - Class: 114
-      Script: {instanceID: 13502}
-    - Class: 114
-      Script: {instanceID: 13520}
     - Class: 114
       Script: {instanceID: 13950}
     - Class: 114
@@ -115,11 +107,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14102}
     - Class: 114
-      Script: {instanceID: 14248}
-    - Class: 114
       Script: {instanceID: 14372}
     - Class: 114
-      Script: {instanceID: 14616}
+      Script: {instanceID: 14614}
+    - Class: 114
+      Script: {instanceID: 18826}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -129,6 +121,65 @@ ScriptsOnlyBuild:
     - Class: 196
       Script: {instanceID: 0}
     - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/MainMenu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11320}
+    - Class: 114
+      Script: {instanceID: 11624}
+    - Class: 114
+      Script: {instanceID: 11678}
+    - Class: 114
+      Script: {instanceID: 12382}
+    - Class: 114
+      Script: {instanceID: 12438}
+    - Class: 114
+      Script: {instanceID: 13140}
+    - Class: 114
+      Script: {instanceID: 13502}
+    - Class: 114
+      Script: {instanceID: 13520}
+    - Class: 114
+      Script: {instanceID: 13950}
+    - Class: 114
+      Script: {instanceID: 14248}
+    - Class: 114
+      Script: {instanceID: 14614}
+    - Class: 114
+      Script: {instanceID: 16040}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -237,7 +288,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 1330a255a8a2b013e7bdf79162ad074e
+      Hash: 2d852ffbb229377166038fe70c0a2f8f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainCarMove
@@ -435,7 +486,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: e4ae466c04e715957dba26d6ef70dadf
+      Hash: 89a94147a426363cf3e5b4bfe0e7e9df
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Crash
@@ -561,13 +612,13 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: e0a9e58dca11dd859413696779359356
+      Hash: bf92a129667deca83161b22547bbf049
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Score
   - hash:
       serializedVersion: 2
-      Hash: 1330a255a8a2b013e7bdf79162ad074e
+      Hash: 2d852ffbb229377166038fe70c0a2f8f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RoadMove
@@ -619,12 +670,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HardController
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -697,7 +742,20 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 726962c48fb187220d76f920f331397b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SavePlayersData
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/MainMenu.unity
+  - Assets/Scenes/Game.unity
   playerPath: D:/Programms/Unity/Projects/Cars/TestMadRider.apk
