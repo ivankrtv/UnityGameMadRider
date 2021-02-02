@@ -6,7 +6,7 @@ public class RoadMove : MonoBehaviour
     private float tp = 42.3f;
     private float z;
     private Vector3 vec = new Vector3(0, 0, 1);
-    public bool isCrashed = false;
+    public static bool isCrashed = false;
 
 
     void Update()

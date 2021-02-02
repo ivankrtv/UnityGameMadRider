@@ -7,8 +7,10 @@ public class Reset : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("Game");
-        Road.GetComponent<RoadMove>().isCrashed = false;
-        Player.GetComponent<MainCarMove>().isCrashed = false;
+        //Road.GetComponent<RoadMove>().isCrashed = false;
+        //Player.GetComponent<MainCarMove>().isCrashed = false;
+        RoadMove.isCrashed = false;
+        MainCarMove.isCrashed = false;
         EnemyMove.isCrashed = false;
         EnemyGenerate.isCrashed = false;
         Score.isCrashed = false;

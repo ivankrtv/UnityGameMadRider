@@ -6,7 +6,7 @@ public class MainCarMove : MonoBehaviour
 {
     private float x;
     public static float speed = 10f;
-    public bool isCrashed = false;
+    public static bool isCrashed = false;
     private Vector3 vec = new Vector3(1, 0, 0);
 
 
