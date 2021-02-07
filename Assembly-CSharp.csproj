@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\LeftTouch.cs" />
     <Compile Include="Assets\Scripts\MainCarMove.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\MainMenuRoadMove.cs" />
     <Compile Include="Assets\Scripts\Reset.cs" />
     <Compile Include="Assets\Scripts\RightTouch.cs" />
     <Compile Include="Assets\Scripts\RoadMove.cs" />
